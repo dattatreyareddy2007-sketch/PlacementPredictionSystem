@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Exploratory Data Analysis</h2>
+
+<h3>CGPA Histogram</h3>
+<img src="{{ url_for('static', filename='charts/CGPA_hist.png') }}" width="600">
+<p>Visualizing Distribution of CGPA</p>
+<hr>
+
+<h3>CGPA vs Placement Status (Boxplot)</h3>
+<img src="{{ url_for('static', filename='charts/boxplot.png') }}" width="600">
+<p>Visualizing relation between CGPA and Placement Status</p>
+<hr>
+
+<h3>Placement Status Distribution</h3>
+<img src="{{ url_for('static', filename='charts/placement_status.png') }}" width="600">
+<p>Distribution of Placement Status</p>
+<hr>
+
+<h3>Gender Distribution</h3>
+<img src="{{ url_for('static', filename='charts/gender_distribution.png') }}" width="600">
+<p>Gender split of students</p>
+<hr>
+
+<h3>CGPA vs Aptitude Test Score</h3>
+<img src="{{ url_for('static', filename='charts/cgpa_aptitudescore_scatter.png') }}" width="600">
+<p>Scatter plot of CGPA vs Aptitude Test Score</p>
+<hr>
+
+<h3>Correlation Heatmap</h3>
+<img src="{{ url_for('static', filename='charts/heatmap.png') }}" width="600">
+<p>Correlation between CGPA, Aptitude Test Score, and Placement Status</p>
+
+{% endblock %}
